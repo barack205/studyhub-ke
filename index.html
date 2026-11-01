@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudyHub KE — free revision quizzes for secondary school students in Kenya.">
+  <title>StudyHub KE | Learn Smarter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="StudyHub KE home">
+      <span class="brand-mark">SH</span>
+      <span>StudyHub <b>KE</b><small>LEARN SMARTER. EVERY DAY.</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#subjects">Subjects</a>
+      <a href="#quiz">Take a quiz</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR FREE REVISION SPACE</p>
+        <h1>Your next exam<br><span>starts here.</span></h1>
+        <p class="hero-text">Build confidence one question at a time. Practise school subjects, get instant feedback, and track your score — all for free.</p>
+        <a class="primary-button" href="#quiz">Start a quiz <span aria-hidden="true">→</span></a>
+        <p class="tiny-note">No account needed. Works on phones and computers.</p>
+      </div>
+      <div class="hero-card" aria-label="Quiz preview">
+        <div class="hero-card-top"><span class="live-dot"></span> QUICK PRACTICE <span class="pill">FREE</span></div>
+        <div class="hero-card-title">Small steps. Big progress.</div>
+        <div class="progress-track"><span></span></div>
+        <div class="hero-stats">
+          <div><strong>6</strong><small>questions per quiz</small></div>
+          <div><strong>Instant</strong><small>answer feedback</small></div>
+        </div>
+        <div class="mini-question"><span class="question-number">01</span><span>Ready to test what you know?</span><span class="checkmark">✓</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="subjects">
+      <div class="section-heading">
+        <div><p class="eyebrow">PICK YOUR PATH</p><h2>Explore subjects</h2></div>
+        <p>Choose a Form and subject to practise six questions with topic labels and explanations.</p>
+      </div>
+      <div class="form-picker">
+        <label for="form-select">Choose your class</label>
+        <select id="form-select" aria-label="Choose your form">
+          <option value="1">Form 1</option>
+          <option value="2">Form 2</option>
+          <option value="3">Form 3</option>
+          <option value="4">Form 4</option>
+        </select>
+        <p>Choose your Form first, then select a subject to practise.</p>
+      </div>
+      <div class="subject-grid">
+        <button class="subject-card selected" data-subject="mathematics">
+          <span class="subject-icon math-icon">＋</span><span><strong>Mathematics</strong><small>Numbers & problem solving</small></span><span class="card-arrow">↗</span>
+        </button>
+        <button class="subject-card" data-subject="biology">
+          <span class="subject-icon bio-icon">✿</span><span><strong>Biology</strong><small>Living things & life</small></span><span class="card-arrow">↗</span>
+        </button>
+        <button class="subject-card" data-subject="chemistry">
+          <span class="subject-icon chem-icon">⚗</span><span><strong>Chemistry</strong><small>Matter & reactions</small></span><span class="card-arrow">↗</span>
+        </button>
+        <button class="subject-card" data-subject="english">
+          <span class="subject-icon eng-icon">Aa</span><span><strong>English</strong><small>Grammar & vocabulary</small></span><span class="card-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-intro">
+        <p class="eyebrow">LET'S PRACTISE</p>
+        <h2 id="quiz-title">Form 1 Mathematics quiz</h2>
+        <p id="quiz-description">Choose a subject and practise at your own pace.</p>
+      </div>
+      <div class="quiz-panel">
+        <div class="quiz-topline"><span id="question-count">QUESTION 1 OF 5</span><span id="current-score">SCORE: 0</span></div>
+        <div class="quiz-progress"><span id="quiz-progress-fill"></span></div>
+        <div id="question-area" aria-live="polite">
+          <h3 id="question-text">Loading question…</h3>
+          <div id="answer-options" class="answer-options"></div>
+          <p id="feedback" class="feedback" role="status"></p>
+          <div class="quiz-actions"><button id="next-button" class="primary-button" disabled>Next question →</button></div>
+        </div>
+        <div id="result-area" class="result-area" hidden aria-live="polite">
+          <div class="result-icon" id="result-icon">✓</div>
+          <p class="eyebrow">QUIZ COMPLETE</p>
+          <h3 id="result-title">Nice work!</h3>
+          <p id="result-summary"></p>
+          <div class="result-score"><strong id="final-score">0/5</strong><span>correct answers</span></div>
+          <button id="retry-button" class="primary-button">Try again ↻</button>
+        </div>
+      </div>
+      <p class="quiz-footnote">These are original practice questions based on broad secondary-school revision topics. They are not official KICD or KCSE questions; teachers should verify topic and Form placement against the current curriculum design.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-symbol">✦</div>
+      <div><p class="eyebrow">MADE FOR LEARNERS</p><h2>Learn at your own pace.</h2><p>StudyHub KE is a simple learning project built to make revision more approachable. Start with a quiz, learn from the feedback, and keep practising. For official curriculum designs and learning resources, visit <a href="https://kicd.ac.ke/cbc-materials/" target="_blank" rel="noopener noreferrer">KICD</a> or the <a href="https://lms.kec.ac.ke/" target="_blank" rel="noopener noreferrer">Kenya Education Cloud</a>.</p></div>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#">StudyHub KE</a><span>Free revision practice · Made for learning</span><span>© <span id="year"></span> StudyHub KE</span></footer>
+</body>
+</html>
